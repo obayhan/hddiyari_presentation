@@ -1,4 +1,10 @@
-hddiyari_presentation
+HDdiyari Presentation Maker
 =====================
 
-presentation make for torrent site hddiyari.net
+Presentation maker for torrent site [hddiyari.net][1]
+
+**Contributors=** Mehmet Özgür Bayhan
+**Licence=** GPL v2
+
+
+  [1]: hddiyari.net
