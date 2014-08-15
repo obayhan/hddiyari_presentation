@@ -1,1 +1,6 @@
 bpython
+beautifulsoup4
+urllib3
+mechanize
+pillow
+pyimgur

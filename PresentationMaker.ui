@@ -6,12 +6,30 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>797</width>
-    <height>600</height>
+    <width>800</width>
+    <height>900</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>900</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>HDdiyarı.Net Sunum Hazırlayıcı</string>
   </property>
   <property name="tabShape">
    <enum>QTabWidget::Triangular</enum>
@@ -22,14 +40,21 @@
      <rect>
       <x>-2</x>
       <y>9</y>
-      <width>801</width>
-      <height>541</height>
+      <width>791</width>
+      <height>791</height>
      </rect>
     </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
     <widget class="QWidget" name="tab_film">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>false</kerning>
+      </font>
+     </property>
      <attribute name="title">
       <string>Film</string>
      </attribute>
@@ -38,14 +63,298 @@
        <rect>
         <x>9</x>
         <y>9</y>
-        <width>781</width>
-        <height>491</height>
+        <width>771</width>
+        <height>741</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout">
        <property name="sizeConstraint">
         <enum>QLayout::SetDefaultConstraint</enum>
        </property>
+       <item row="16" column="1">
+        <widget class="QLineEdit" name="txt_CapLink4">
+         <property name="placeholderText">
+          <string>URL giriniz...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="2">
+        <widget class="QPushButton" name="btn_CreateCaps">
+         <property name="text">
+          <string>Caps Hazırla</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1" colspan="3">
+        <widget class="QLineEdit" name="txt_Genre"/>
+       </item>
+       <item row="18" column="0" colspan="4">
+        <widget class="Line" name="line_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="19" column="1">
+        <widget class="QPushButton" name="btn_SelectMovie">
+         <property name="text">
+          <string>Film Dosyasını Seçiniz</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Yönetmen</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Yazar</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="0" rowspan="5">
+        <widget class="QLabel" name="label_9">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>CAPS</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0" colspan="4">
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Başlık</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1" colspan="3">
+        <widget class="QLineEdit" name="txt_Head"/>
+       </item>
+       <item row="15" column="1">
+        <widget class="QLineEdit" name="txt_CapLink3">
+         <property name="placeholderText">
+          <string>URL giriniz...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Oyuncular</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Tür</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0" colspan="4">
+        <widget class="Line" name="line_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Afiş</string>
+         </property>
+        </widget>
+       </item>
+       <item row="19" column="2" colspan="2">
+        <widget class="QTextEdit" name="txt_Info"/>
+       </item>
+       <item row="11" column="2">
+        <widget class="QPushButton" name="btn_CreateCover">
+         <property name="text">
+          <string>Afişi Hazırla</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Konu</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0" colspan="4">
+        <widget class="Line" name="line_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Youtube</string>
+         </property>
+        </widget>
+       </item>
+       <item row="19" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Info</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1" colspan="3">
+        <widget class="QTextEdit" name="txt_Actors"/>
+       </item>
+       <item row="4" column="1" colspan="3">
+        <widget class="QLineEdit" name="txt_Author"/>
+       </item>
+       <item row="13" column="1">
+        <widget class="QLineEdit" name="txt_CapLink1">
+         <property name="placeholderText">
+          <string>URL giriniz...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1" colspan="3">
+        <widget class="QTextEdit" name="txt_Description"/>
+       </item>
+       <item row="3" column="1" colspan="3">
+        <widget class="QLineEdit" name="txt_Director"/>
+       </item>
+       <item row="11" column="1">
+        <widget class="QLineEdit" name="txt_CoverLink">
+         <property name="text">
+          <string extracomment="Resmin URL si"/>
+         </property>
+         <property name="placeholderText">
+          <string>URL giriniz...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="1">
+        <widget class="QLineEdit" name="txt_CapLink2">
+         <property name="placeholderText">
+          <string>URL giriniz...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1" colspan="3">
+        <widget class="QLineEdit" name="txt_Youtube">
+         <property name="placeholderText">
+          <string>URL giriniz...(youtube.com)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="1">
+        <widget class="QLineEdit" name="txt_CapLink5">
+         <property name="placeholderText">
+          <string>URL giriniz...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="3">
+        <widget class="QLineEdit" name="txt_Cover"/>
+       </item>
+       <item row="0" column="1" colspan="3">
+        <widget class="QLineEdit" name="txt_InfoUrl">
+         <property name="placeholderText">
+          <string>URL giriniz...(divxplanet.com)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="btn_MovieInfo">
+         <property name="text">
+          <string>Film Bilgisi Getir</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="3">
+        <widget class="QLineEdit" name="txt_Cap1"/>
+       </item>
+       <item row="14" column="3">
+        <widget class="QLineEdit" name="txt_Cap2"/>
+       </item>
+       <item row="15" column="3">
+        <widget class="QLineEdit" name="txt_Cap3"/>
+       </item>
+       <item row="16" column="3">
+        <widget class="QLineEdit" name="txt_Cap4"/>
+       </item>
+       <item row="17" column="3">
+        <widget class="QLineEdit" name="txt_Cap5"/>
+       </item>
       </layout>
      </widget>
     </widget>
@@ -59,6 +368,21 @@
       <string>Müzik</string>
      </attribute>
     </widget>
+    <widget class="QWidget" name="tab_output">
+     <attribute name="title">
+      <string>Sunum</string>
+     </attribute>
+     <widget class="QPlainTextEdit" name="txt_Output">
+      <property name="geometry">
+       <rect>
+        <x>3</x>
+        <y>1</y>
+        <width>781</width>
+        <height>751</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -66,13 +390,159 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>797</width>
+     <width>800</width>
      <height>25</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuD_n_t_r">
+    <property name="title">
+     <string>Sunum Hazırla</string>
+    </property>
+    <addaction name="actionFilm"/>
+    <addaction name="actionOyun"/>
+    <addaction name="actionMuzik"/>
+   </widget>
+   <addaction name="menuD_n_t_r"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionFilm">
+   <property name="text">
+    <string>Film</string>
+   </property>
+  </action>
+  <action name="actionMuzik">
+   <property name="text">
+    <string>Müzik</string>
+   </property>
+  </action>
+  <action name="actionOyun">
+   <property name="text">
+    <string>Oyun</string>
+   </property>
+  </action>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>btn_CreateCover</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>create_cover()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>508</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>369</x>
+     <y>809</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_CreateCaps</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>create_caps()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>508</x>
+     <y>634</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>809</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_SelectMovie</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>select_movie()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>338</x>
+     <y>777</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>202</x>
+     <y>809</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFilm</sender>
+   <signal>activated()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>create_presentation_movie()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionMuzik</sender>
+   <signal>activated()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>create_presentation_audio()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOyun</sender>
+   <signal>activated()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>create_presentation_game()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_MovieInfo</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>get_movie_info()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>85</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>101</x>
+     <y>840</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>create_cover()</slot>
+  <slot>create_caps()</slot>
+  <slot>create_presentation_movie()</slot>
+  <slot>select_movie()</slot>
+  <slot>create_presentation_audio()</slot>
+  <slot>create_presentation_game()</slot>
+  <slot>get_movie_info()</slot>
+ </slots>
 </ui>

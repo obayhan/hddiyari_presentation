@@ -1,0 +1,2 @@
+#!/bin/sh
+pyuic4 PresentationMaker.ui -xo PresentationMaker.py
