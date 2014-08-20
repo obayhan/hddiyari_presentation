@@ -1,7 +1,10 @@
-# -*- coding: utf-8 -*-  
+# -*- coding: utf-8 -*-
+from PyQt4.QtCore import QString
+from PyQt4.QtGui import QFileDialog
+
 __author__ = 'ozgur'
 __creation_date__ = '13.08.2014' '00:45'
-from engine import MovieInfoFetcher, ImageProcessor
+from engine import MovieInfoFetcher, ImageProcessor, MovieMetadata
 
 
 class PresentationMakerBackEnd():
@@ -32,7 +35,14 @@ class PresentationMakerBackEnd():
             self.txt_Cap5.setText(ip.prepare_image(self.txt_CapLink5.text(), "cover"))
 
     def select_movie(self):
-        pass
+        a=QString()
+        a.toUtf8()
+        movie_path = QFileDialog.getOpenFileName().toUtf8()
+        print movie_path
+        mmd = MovieMetadata()
+        info = mmd.get_movie_metadata(movie_path)
+        self.txt_Info.setText(info)
+
 
     def create_presentation_movie(self):
         output = ""

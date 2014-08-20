@@ -6,8 +6,19 @@ from mechanize import Browser
 from bs4 import BeautifulSoup
 import re
 from PIL import Image
+
 import pyimgur
 
+favi = "/home/ozgur/mount/media/Series/Conan/ConanTheBarbarian/Conan.the.Barbarian.1982.iNTERNAL.DVDRiP.XViD.CD1-HLS.avi"
+fmkv = "/home/ozgur/mount/media/TorrentTemp/All.About.Steve.2009.720p.BluRay.DUAL.x264-CBGB(HDA).mkv"
+
+from hachoir_core.error import HachoirError
+from hachoir_core.cmd_line import unicodeFilename
+from hachoir_parser import createParser
+from hachoir_core.tools import makePrintable
+from hachoir_metadata import extractMetadata
+from hachoir_core.i18n import getTerminalCharset
+from sys import argv, stderr, exit
 
 __author__ = 'ozgur'
 __creation_date__ = '11.08.2014' '23:15'
@@ -152,4 +163,32 @@ class ImageProcessor():
             self._download_image(link, path)
             self._resize_image(path)
             retval = self._upload_image(path)
+        return retval
+
+
+class MovieMetadata():
+    def __init__(self):
+        pass
+
+    def get_movie_metadata(self, filename):
+        filename, realname = unicodeFilename(filename), filename
+        # parser = createParser(filename, realname)
+        parser = createParser(filename, filename)
+        if not parser:
+            print >> stderr, "Unable to parse file"
+            exit(1)
+        try:
+            metadata = extractMetadata(parser)
+        except HachoirError, err:
+            print "Metadata extraction error: %s" % unicode(err)
+            metadata = None
+        if not metadata:
+            print "Unable to extract metadata"
+            exit(1)
+
+        text = metadata.exportPlaintext()
+        charset = getTerminalCharset()
+        retval = ""
+        for line in text:
+            retval += makePrintable(line, charset) + u"\n"
         return retval

@@ -4,3 +4,6 @@ urllib3
 mechanize
 pillow
 pyimgur
+hachoir-core
+hachoir-metadata
+hachoir-parser
