@@ -67,8 +67,10 @@ class MovieInfoFetcher():
         temp_list = soup.find_all('div', itemprop='author')
         for item in temp_list:
             authors += item.a.span.text + ", "
-
-        title = soup.find('span', itemprop='alternativeHeadline').text or ""
+        try:
+            title = soup.find('span', itemprop='alternativeHeadline').text
+        except:
+            title = ""
 
         temp_list = soup.find_all('div', itemprop='actor')
         for item in temp_list:
@@ -77,7 +79,10 @@ class MovieInfoFetcher():
         temp_list = soup.find_all('span', itemprop='genre')
         for item in temp_list:
             genre += item.text + ", "
-        description = soup.find('span', itemprop='description').text or ""
+        try:
+            description = soup.find('span', itemprop='description').text
+        except:
+            description = ""
 
         retval = {
             'directors': directors,

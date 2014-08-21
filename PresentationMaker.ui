@@ -31,6 +31,10 @@
   <property name="windowTitle">
    <string>HDdiyarı.Net Sunum Hazırlayıcı</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>resources/skull1.JPG</normaloff>resources/skull1.JPG</iconset>
+  </property>
   <property name="tabShape">
    <enum>QTabWidget::Triangular</enum>
   </property>
@@ -74,7 +78,7 @@
        <item row="16" column="1">
         <widget class="QLineEdit" name="txt_CapLink4">
          <property name="placeholderText">
-          <string>URL giriniz...</string>
+          <string>Resmin URLsini giriniz...</string>
          </property>
         </widget>
        </item>
@@ -167,7 +171,7 @@
        <item row="15" column="1">
         <widget class="QLineEdit" name="txt_CapLink3">
          <property name="placeholderText">
-          <string>URL giriniz...</string>
+          <string>Resmin URLsini giriniz...</string>
          </property>
         </widget>
        </item>
@@ -282,7 +286,7 @@
        <item row="13" column="1">
         <widget class="QLineEdit" name="txt_CapLink1">
          <property name="placeholderText">
-          <string>URL giriniz...</string>
+          <string>Resmin URLsini giriniz...</string>
          </property>
         </widget>
        </item>
@@ -298,14 +302,14 @@
           <string extracomment="Resmin URL si"/>
          </property>
          <property name="placeholderText">
-          <string>URL giriniz...</string>
+          <string>Resmin URLsini giriniz...</string>
          </property>
         </widget>
        </item>
        <item row="14" column="1">
         <widget class="QLineEdit" name="txt_CapLink2">
          <property name="placeholderText">
-          <string>URL giriniz...</string>
+          <string>Resmin URLsini giriniz...</string>
          </property>
         </widget>
        </item>
@@ -319,7 +323,7 @@
        <item row="17" column="1">
         <widget class="QLineEdit" name="txt_CapLink5">
          <property name="placeholderText">
-          <string>URL giriniz...</string>
+          <string>Resmin URLsini giriniz...</string>
          </property>
         </widget>
        </item>
@@ -329,7 +333,7 @@
        <item row="0" column="1" colspan="3">
         <widget class="QLineEdit" name="txt_InfoUrl">
          <property name="placeholderText">
-          <string>URL giriniz...(divxplanet.com)</string>
+          <string>Filmin URLsini giriniz...(divxplanet.com)</string>
          </property>
         </widget>
        </item>
@@ -402,7 +406,14 @@
     <addaction name="actionOyun"/>
     <addaction name="actionMuzik"/>
    </widget>
+   <widget class="QMenu" name="menuHakk_nda">
+    <property name="title">
+     <string>Hakkında</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
    <addaction name="menuD_n_t_r"/>
+   <addaction name="menuHakk_nda"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionFilm">
@@ -418,6 +429,11 @@
   <action name="actionOyun">
    <property name="text">
     <string>Oyun</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>Sürüm</string>
    </property>
   </action>
  </widget>

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'PresentationMaker.ui'
 #
-# Created: Fri Aug 15 22:41:30 2014
+# Created: Thu Aug 21 18:13:23 2014
 # by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -37,6 +37,9 @@ class Ui_MainWindow(object, PMB):
         MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setMinimumSize(QtCore.QSize(800, 900))
         MainWindow.setMaximumSize(QtCore.QSize(800, 900))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8("resources/skull1.JPG")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         MainWindow.setTabShape(QtGui.QTabWidget.Triangular)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
@@ -242,6 +245,8 @@ class Ui_MainWindow(object, PMB):
         self.menubar.setObjectName(_fromUtf8("menubar"))
         self.menuD_n_t_r = QtGui.QMenu(self.menubar)
         self.menuD_n_t_r.setObjectName(_fromUtf8("menuD_n_t_r"))
+        self.menuHakk_nda = QtGui.QMenu(self.menubar)
+        self.menuHakk_nda.setObjectName(_fromUtf8("menuHakk_nda"))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtGui.QStatusBar(MainWindow)
         self.statusbar.setObjectName(_fromUtf8("statusbar"))
@@ -252,31 +257,37 @@ class Ui_MainWindow(object, PMB):
         self.actionMuzik.setObjectName(_fromUtf8("actionMuzik"))
         self.actionOyun = QtGui.QAction(MainWindow)
         self.actionOyun.setObjectName(_fromUtf8("actionOyun"))
+        self.actionAbout = QtGui.QAction(MainWindow)
+        self.actionAbout.setObjectName(_fromUtf8("actionAbout"))
         self.menuD_n_t_r.addAction(self.actionFilm)
         self.menuD_n_t_r.addAction(self.actionOyun)
         self.menuD_n_t_r.addAction(self.actionMuzik)
+        self.menuHakk_nda.addAction(self.actionAbout)
         self.menubar.addAction(self.menuD_n_t_r.menuAction())
+        self.menubar.addAction(self.menuHakk_nda.menuAction())
 
         self.retranslateUi(MainWindow)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QObject.connect(self.btn_CreateCover, QtCore.SIGNAL(_fromUtf8("clicked()")), self.create_cover)
         QtCore.QObject.connect(self.btn_CreateCaps, QtCore.SIGNAL(_fromUtf8("clicked()")), self.create_caps)
         QtCore.QObject.connect(self.btn_SelectMovie, QtCore.SIGNAL(_fromUtf8("clicked()")), self.select_movie)
         QtCore.QObject.connect(self.actionFilm, QtCore.SIGNAL(_fromUtf8("activated()")), self.create_presentation_movie)
         QtCore.QObject.connect(self.actionMuzik, QtCore.SIGNAL(_fromUtf8("activated()")), self.create_presentation_audio)
         QtCore.QObject.connect(self.actionOyun, QtCore.SIGNAL(_fromUtf8("activated()")), self.create_presentation_game)
+        QtCore.QObject.connect(self.actionAbout, QtCore.SIGNAL(_fromUtf8("activated()")), self.show_about)
         QtCore.QObject.connect(self.btn_MovieInfo, QtCore.SIGNAL(_fromUtf8("clicked()")), self.get_movie_info)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "HDdiyarı.Net Sunum Hazırlayıcı", None))
-        self.txt_CapLink4.setPlaceholderText(_translate("MainWindow", "URL giriniz...", None))
+        self.txt_CapLink4.setPlaceholderText(_translate("MainWindow", "Resmin URLsini giriniz...", None))
         self.btn_CreateCaps.setText(_translate("MainWindow", "Caps Hazırla", None))
         self.btn_SelectMovie.setText(_translate("MainWindow", "Film Dosyasını Seçiniz", None))
         self.label_2.setText(_translate("MainWindow", "Yönetmen", None))
         self.label_3.setText(_translate("MainWindow", "Yazar", None))
         self.label_9.setText(_translate("MainWindow", "CAPS", None))
         self.label.setText(_translate("MainWindow", "Başlık", None))
-        self.txt_CapLink3.setPlaceholderText(_translate("MainWindow", "URL giriniz...", None))
+        self.txt_CapLink3.setPlaceholderText(_translate("MainWindow", "Resmin URLsini giriniz...", None))
         self.label_4.setText(_translate("MainWindow", "Oyuncular", None))
         self.label_5.setText(_translate("MainWindow", "Tür", None))
         self.label_8.setText(_translate("MainWindow", "Afiş", None))
@@ -284,21 +295,23 @@ class Ui_MainWindow(object, PMB):
         self.label_6.setText(_translate("MainWindow", "Konu", None))
         self.label_7.setText(_translate("MainWindow", "Youtube", None))
         self.label_10.setText(_translate("MainWindow", "Info", None))
-        self.txt_CapLink1.setPlaceholderText(_translate("MainWindow", "URL giriniz...", None))
-        self.txt_CoverLink.setPlaceholderText(_translate("MainWindow", "URL giriniz...", None))
-        self.txt_CapLink2.setPlaceholderText(_translate("MainWindow", "URL giriniz...", None))
+        self.txt_CapLink1.setPlaceholderText(_translate("MainWindow", "Resmin URLsini giriniz...", None))
+        self.txt_CoverLink.setPlaceholderText(_translate("MainWindow", "Resmin URLsini giriniz...", None))
+        self.txt_CapLink2.setPlaceholderText(_translate("MainWindow", "Resmin URLsini giriniz...", None))
         self.txt_Youtube.setPlaceholderText(_translate("MainWindow", "URL giriniz...(youtube.com)", None))
-        self.txt_CapLink5.setPlaceholderText(_translate("MainWindow", "URL giriniz...", None))
-        self.txt_InfoUrl.setPlaceholderText(_translate("MainWindow", "URL giriniz...(divxplanet.com)", None))
+        self.txt_CapLink5.setPlaceholderText(_translate("MainWindow", "Resmin URLsini giriniz...", None))
+        self.txt_InfoUrl.setPlaceholderText(_translate("MainWindow", "Filmin URLsini giriniz...(divxplanet.com)", None))
         self.btn_MovieInfo.setText(_translate("MainWindow", "Film Bilgisi Getir", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_film), _translate("MainWindow", "Film", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_oyun), _translate("MainWindow", "Oyun", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_muzik), _translate("MainWindow", "Müzik", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_output), _translate("MainWindow", "Sunum", None))
         self.menuD_n_t_r.setTitle(_translate("MainWindow", "Sunum Hazırla", None))
+        self.menuHakk_nda.setTitle(_translate("MainWindow", "Hakkında", None))
         self.actionFilm.setText(_translate("MainWindow", "Film", None))
         self.actionMuzik.setText(_translate("MainWindow", "Müzik", None))
         self.actionOyun.setText(_translate("MainWindow", "Oyun", None))
+        self.actionAbout.setText(_translate("MainWindow", "Sürüm", None))
 
 
 if __name__ == "__main__":
