@@ -151,6 +151,7 @@ class ImageProcessor():
         im = Image.open(path)
         im.thumbnail(size, Image.ANTIALIAS)
         im.save(path)
+        return True
 
     def _upload_image(self, path):
         im = pyimgur.Imgur(CLIENT_ID)
